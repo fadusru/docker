@@ -1,0 +1,19 @@
+services:
+  inpx-web:
+    image: guaricema/inpx-web
+    container_name: inpx-web2
+    environment:
+      - INPX=/data/flibusta/flibusta_fb2_local.inpx
+      - LIBDIR=/data/flibusta/
+    volumes:
+      - ./inpx-data:/usr/local/bin/.inpx-web
+      - ./fb2.flibusta.net:/data/flibusta
+    restart: unless-stopped
+    ports:
+      - 12380:12380
+    networks:
+      - inpx-net
+
+networks:
+  inpx-net:
+    driver: bridge

@@ -1,0 +1,24 @@
+# С данной конфигурацией Inpx-web работаем на моем NAS Terramaster
+# Каждый месяц посредством qBittorrent скачиваю обновления библиотеки
+# В моем случае скачанная библиотека размещена в каталоге:
+# /Volume2/qBittorrent/qBittorrent/downloads/fb2.Flibusta.Net
+# Замените путь к каталогу fb2.Flibusta.Net на свой
+services:
+  inpx-web:
+    image: guaricema/inpx-web
+    container_name: inpx-web2
+    environment:
+      - INPX=/data/flibusta/flibusta_fb2_local.inpx
+      - LIBDIR=/data/flibusta/
+    volumes:
+      - ./inpx-data:/usr/local/bin/.inpx-web
+      - /Volume2/qBittorrent/qBittorrent/downloads/fb2.Flibusta.Net:/data/flibusta
+    restart: unless-stopped
+    ports:
+      - 12380:12380
+    networks:
+      - inpx-net
+
+networks:
+  inpx-net:
+    driver: bridge
