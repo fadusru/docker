@@ -22,3 +22,8 @@ services:
 networks:
   inpx-net:
     driver: bridge
+
+x-app-meta:
+  web:
+    port: 12380
+    protocol: http
