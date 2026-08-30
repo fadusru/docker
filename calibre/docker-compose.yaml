@@ -1,4 +1,4 @@
-# На момент подготовки конфигурации тег latest стоя на сборке 9.14.0
+# На момент подготовки конфигурации тег latest стоя на сборке версии 9.14.0
 services:
   calibre:
     image: linuxserver/calibre:latest
@@ -23,8 +23,3 @@ services:
 networks:
   calibre-net:
     driver: bridge
-
-x-app-meta:
-  web:
-    port: 3181
-    protocol: https

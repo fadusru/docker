@@ -1,0 +1,49 @@
+# на момент подготовки конфига тег latest проставлен на версии:
+# 7.1.0-apache, 7.1-apache, 7-apache, apache, 7.1.0, 7.1, 7, latest, 7.1.0-php8.3-apache, 7.1-php8.3-apache,
+# 7-php8.3-apache, php8.3-apache, 7.1.0-php8.3, 7.1-php8.3, 7-php8.3, php8.3⁠
+# За основу взята конфигурация со страницы на Docker Hub: https://hub.docker.com/_/wordpress
+# Вариант с Docker Hub в файле docker-compose.yaml, в этом файле конфиг исправлен для установки на свой NAS Terramaster
+# Заменил хранение данных WP и БД в именованных volumes на монтирование директории с хостовой машины
+# Открыл порт к БД, если вам это не нужно - удалите строки ports: - 3360:3306 (на моей хостовой машине порт 3306 занят)
+services:
+
+  wordpress:
+    image: wordpress:latest
+    container_name: wordpress
+    restart: unless-stopped
+    environment:
+      WORDPRESS_DB_HOST: db
+      WORDPRESS_DB_USER: exampleuser
+      WORDPRESS_DB_PASSWORD: examplepass
+      WORDPRESS_DB_NAME: exampledb
+    volumes:
+      - ./wp-data:/var/www/html
+    networks:
+      - wordpress-net
+    ports:
+      - 8060:80
+
+  db:
+    image: mysql:8.0
+    container_name: mysql
+    restart: unless-stopped
+    environment:
+      MYSQL_DATABASE: exampledb
+      MYSQL_USER: exampleuser
+      MYSQL_PASSWORD: examplepass
+      MYSQL_RANDOM_ROOT_PASSWORD: '1'
+    volumes:
+      - ./db-data:/var/lib/mysql
+    networks:
+      - wordpress-net
+    ports:
+      - 3360:3306
+
+networks:
+  wordpress-net:
+    driver: bridge
+
+x-app-meta:
+  web:
+    port: 8060
+    protocol: http
