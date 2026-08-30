@@ -1,4 +1,4 @@
-# На момент подготовки конфигурации тег latest стоя на сборке версии 9.14.0
+# На момент подготовки конфигурации тег latest стоя на сборке 9.14.0
 services:
   calibre:
     image: linuxserver/calibre:latest
@@ -7,7 +7,7 @@ services:
     environment:
       - PUID=1000
       - PGID=1000
-      - TZ=Etc/UTC
+      - TZ=Europe/Moskow
       - CUSTOM_USER=abc
       - PASSWORD=abc
     ports:

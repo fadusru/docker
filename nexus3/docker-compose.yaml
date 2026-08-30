@@ -1,0 +1,25 @@
+# https://hub.docker.com/r/sonatype/nexus3/
+# https://github.com/sonatype/docker-nexus3/blob/main/Dockerfile
+# https://reg.cloud/blog/ustanovka-i-ispolzovanie-nexus-repository/
+# docker run -d -p 8081:8081 --name nexus  -e INSTALL4J_ADD_VM_PARAMS="-Xms2703m -Xmx2703m -XX:MaxDirectMemorySize=2703m
+# -Djava.util.prefs.userRoot=/some-other-dir" sonatype/nexus3
+# docker stop --time=120 <CONTAINER_NAME>
+services:
+  nexus:
+    image: sonatype/nexus3:3.95.2-alpine
+    container_name: nexus
+    restart: unless-stopped
+#    environment:
+#      INSTALL4J_ADD_VM_PARAMS : |
+#        "-Xms2703m -Xmx2703m -XX:MaxDirectMemorySize=2703m
+#         -Djava.util.prefs.userRoot=/some-other-dir" sonatype/nexus3"
+    volumes:
+      - ./nexus-data:/nexus-data
+    ports:
+      - 8081:8081
+    networks:
+      - nexus-net
+
+networks:
+  nexus-net:
+    driver: bridge
