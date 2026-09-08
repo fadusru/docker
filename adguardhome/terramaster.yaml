@@ -1,0 +1,21 @@
+# Для работы с UI "из коробки" используется 80 порт, он уже занят в Системе. Установил свободный 9080 - замените на свободный у себя
+
+services:
+  adguardhome:
+    image: 'adguard/adguardhome:latest'
+    container_name: adguardhome
+    volumes:
+      - '/Volume1/DockerAppData/AdGuardHomeDocker/work:/opt/adguardhome/work'
+      - '/Volume1/DockerAppData/AdGuardHomeDocker/conf:/opt/adguardhome/conf'
+    ports:
+      - '9080:80'
+      - '3000:3000'
+      - '53:53'
+      - '53:53/udp'
+    restart: unless-stopped
+
+x-app-meta:
+  web:
+    port: 9080
+    protocol: http
+
