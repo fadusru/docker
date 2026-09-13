@@ -1,0 +1,8 @@
+@@||metrika.yandex.ru^
+@@||clck.ru^$important
+@@||vk.com^
+@@||s.click.aliexpress.com^$important
+@@||trk.mail.ru^$important
+@@||ads.google.com^$important
+@@||click.discord.com^$important
+@@||r.mail.ru^$important

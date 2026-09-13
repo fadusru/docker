@@ -1,0 +1,17 @@
+на рабочем столе из контекстного меню выбираем "создать ярлык для веб-страницы"
+
+на nas прописываем dns-серверы в случае, если это не сделал на роутере
+
+Инструкции:
+https://bafista.ru/adguardhome-i-synology-nas-blokiruem-reklamu-vo-vsem-dome/
+https://www.youtube.com/watch?v=_HFEgh8l5rs
+
+https://bafista.ru/ustanovka-adguard-home-i-razblokirovka-docker-hub-clamav-i-tmdb/
+https://www.youtube.com/watch?v=yDwWsdiL3wo
+
+Домашняя страница: https://adguard.com/ru/adguard-home/overview.html
+Страница офф докера:  https://hub.docker.com/r/adguard/adguardhome
+Популярные DNS-провайдеры: https://adguard-dns.io/kb/ru/general/dns-providers/
+
+Рекламные фильтры AdGuard: https://adguard.com/kb/ru/general/ad-filtering/adguard-filters/
+RU AdList https://easylist-downloads.adblockplus.org/advblock.txt

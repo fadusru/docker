@@ -14,7 +14,7 @@
 Далее заполните домен: adguard.home.arpa и IP адрес своего устройства
 
 ## Что еще почитать?
-[Рекомендации по настройке AdGuard Home](https://fadus.ru/recommendations-for-configuring-adguard-home/)
+[fadus.ru: Рекомендации по настройке AdGuard Home](https://fadus.ru/recommendations-for-configuring-adguard-home/)
 
 [AdguardHome и Synology NAS блокируем рекламу во всем доме](https://bafista.ru/adguardhome-i-synology-nas-blokiruem-reklamu-vo-vsem-dome/)
 

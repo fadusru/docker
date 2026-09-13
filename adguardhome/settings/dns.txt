@@ -1,0 +1,17 @@
+Upstream DNS-серверы:
+https://dns10.quad9.net/dns-query
+tls://dns.adguard.com
+#CloudFlare
+tls://1.1.1.1
+#DNS.WATCH
+84.200.70.40
+[/nalog.ru/]77.88.8.8 77.88.8.1
+[/yandex.ru/yandex.com/yandex.kz/]77.88.8.8 77.88.8.1
+[/spamhaus.org/]8.8.8.8
+[/docker.com/docker.io/]https://dns.comss.one/dns-query
+[/clamav.net/]https://dns.comss.one/dns-query
+[/themoviedb.org/tmdb.org/tmdb-image-prod.b-cdn.net/]https://dns.comss.one/dns-query
+
+Размер кеша: 67108864
+
+Оптимистическое кеширование: включить настройку

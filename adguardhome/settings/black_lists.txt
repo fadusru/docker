@@ -1,0 +1,52 @@
+name: AdGuard DNS filter
+url: https://adguardteam.github.io/AdGuardSDNSFilter/Filters/filter.txt
+
+name: AdAway Default Blocklist
+url: https://adaway.org/hosts.txt
+
+name: Game Console Adblock List
+url: https://raw.githubusercontent.com/DandelionSprout/adfilt/master/GameConsoleAdblockList.txt
+
+name: Peter Lowe's List
+url: https://pgl.yoyo.org/adservers/serverlist.php?hostformat=adblockplus&showintro=1&mimetype=plaintext
+
+name: Scam Blocklist by DurableNapkin
+url: https://raw.githubusercontent.com/durablenapkin/scamblocklist/master/adguard.txt
+
+name: Spam404
+url: https://raw.githubusercontent.com/Spam404/lists/master/main-blacklist.txt
+
+name: AdguardRUS
+url: https://raw.githubusercontent.com/AdguardTeam/FiltersRegistry/master/filters/filter_1_Russian/filter.txt
+
+name: MobileReklama
+url: https://raw.githubusercontent.com/AdguardTeam/FiltersRegistry/master/filters/filter_11_Mobile/filter.txt
+
+name: Filtr-Razdragitiley
+url: https://raw.githubusercontent.com/AdguardTeam/FiltersRegistry/master/filters/filter_14_Annoyances/filter.txt
+
+name: The Big List of Hacked Malware Web Sites
+url: https://raw.githubusercontent.com/mitchellkrogza/The-Big-List-of-Hacked-Malware-Web-Sites/master/hosts
+
+name: NoCoin Filter List
+url: https://raw.githubusercontent.com/hoshsadiq/adblock-nocoin-list/master/hosts.txt
+
+Доступны только через vpn:
+
+url: https://www.malwaredomainlist.com/hostslist/hosts.txt
+name: MalwareDomainList.com Hosts List
+
+url: https://easylist-downloads.adblockplus.org/advblock.txt
+name: RU AdList
+
+url: https://abpvn.com/android/abpvn.txt
+name: 'VNM: ABPVN List'
+
+url: https://curben.gitlab.io/malware-filter/urlhaus-filter-agh-online.txt
+name: Online Malicious URL Blocklist
+
+url: https://easylist.to/easylist/easylist.txt
+name: easylist
+
+name: Dan Pollock's List
+url: https://someonewhocares.org/hosts/zero/hosts

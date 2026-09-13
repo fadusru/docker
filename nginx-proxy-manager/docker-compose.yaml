@@ -1,7 +1,8 @@
 # На момент написания конфига тег latest стоял у версии 2.15.1
 services:
   app:
-    image: 'jc21/nginx-proxy-manager:2.15.1'
+    image: 'f6.fadus.ru:8082/jc21/nginx-proxy-manager:2.15.1'
+    container_name: nginx-proxy-manager
     restart: unless-stopped
 
     ports:
