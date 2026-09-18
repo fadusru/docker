@@ -1,0 +1,16 @@
+services:
+  server:
+    image: gitea/gitea:latest
+    container_name: gitea
+    environment:
+      - USER_UID=1003
+      - USER_GID=997
+      - GITEA__database__DB_TYPE=sqlite3
+    restart: unless-stopped
+    volumes:
+      - ./data:/data
+      - ./config:/etc/gitea
+      - /etc/localtime:/etc/localtime:ro
+    ports:
+      - "3003:3000"
+      - "2002:22"
