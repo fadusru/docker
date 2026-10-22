@@ -1,0 +1,2 @@
+#!/bin/bash
+./node_modules/.bin/docsify $1 $2 $3 $4
